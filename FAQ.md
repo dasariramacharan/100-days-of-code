@@ -9,7 +9,7 @@
   **A:** The best way to start would be to follow the [FreeCodeCamp’s Front End Curriculum](https://www.freecodecamp.com/) from the very beginning. The further you get during the 100 days, the better.  
 
   **Q:** I’ve missed a day, does it mean I’ve failed the challenge?  
-  **A:** Absolutely not. You are allowed to miss one day (then make it up by adding one more day to the end of the 100), but never miss two days in a row. This is a great piece of advice on habit formation that I got from Leo Babauta at zen habits.  
+  **A:** Absolutely not. You are allowed to miss one day (then make it up by adding one more day to the end of the 100), but never miss two days in a row. This is a great piece of advice on habit formation that I got from Leo Babauta at [zen habits](https://zenhabits.net/).  
 
   **Q:** I come home late, and by the time I am finished with my hour, it’s past midnight, does it count?  
   **A:** Of course it counts! The rule of thumb is: have you coded for at least an hour before going to sleep that day? If yes, you are on track.  

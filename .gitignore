@@ -3,3 +3,9 @@
 ################################################################################
 
 /Projects/Project1/Promodoro/obj/Debug
+/Projects/Project1/Promodoro/bin
+/Projects/Project1/packages
+/Projects/Project1/.vs
+*.user
+/.vs
+/Projects/.vs
