@@ -1,4 +1,5 @@
 {
+  "compileOnSave": true,
   "compilerOptions": {
     "target": "es5",
     "module": "commonjs",
@@ -8,7 +9,7 @@
     "experimentalDecorators": true,
     "lib": [ "es2015", "dom" ],
     "noImplicitAny": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "compileOnSave": true
-  }
+    "suppressImplicitAnyIndexErrors": true
+  },
+  "exclude": ["node_modules"]
 }
