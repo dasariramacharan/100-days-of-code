@@ -1,0 +1,44 @@
+{
+  "data": [
+    {
+      "id": 101,
+      "name": "Take kid out for fun",
+      "duration": 1
+    },
+    {
+      "id": 102,
+      "name": "Give pentavite to Ome everyday",
+      "duration": 2
+    },
+    {
+      "id": 103,
+      "name": "family task 3",
+      "duration": 3
+    },
+    {
+      "id": 201,
+      "name": "Make a complete app",
+      "duration": 4
+    },
+    {
+      "id": 202,
+      "name": "Networking",
+      "duration": 5
+    },
+    {
+      "id": 203,
+      "name": "Learn design patterns",
+      "duration": 6
+    },
+    {
+      "id": 204,
+      "name": "Use best practices",
+      "duration": 7
+    },
+    {
+      "id": 301,
+      "name": "Go for a run everyday",
+      "duration": 8
+    }
+  ]
+}
