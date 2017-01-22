@@ -1,7 +1,7 @@
 ﻿import { Component } from '@angular/core';
 
 @Component({
-  selector: 'my-app',
-  template: `<h1>Project 1 -  {{name}}</h1>`,
+  selector: 'rama-app',
+  templateUrl: './app/app.component.html',
 })
-export class AppComponent  { name = 'Promodoro App - Aj2 with TS'; }
+export class AppComponent  { pageTitle:string = `Promodoro App - Aj2 with TS`; }

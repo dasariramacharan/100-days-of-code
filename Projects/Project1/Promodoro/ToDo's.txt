@@ -1,0 +1,7 @@
+﻿1)Choose files to stage from vs to git
+2) Use bootstrap with angular 2 project using packages
+  http://stackoverflow.com/questions/36292438/how-to-use-bootstrap-css-library-in-angular-2-project
+3)
+
+Features to try
+1)cherry pick files to stage from vs2015 to git

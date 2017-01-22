@@ -1,0 +1,10 @@
+﻿<h1>Time Remaining</h1>
+ <h2>{{timeLeft|displayMinutes}} : {{timeLeft|displaySeconds}}</h2>
+
+<div *ngIf="timerExpired"> 
+  Session complete. Take a break & Start a new one?
+</div>
+
+<div *ngIf="!timerExpired"> 
+You are getting there.. Stay focussed.
+</div>
