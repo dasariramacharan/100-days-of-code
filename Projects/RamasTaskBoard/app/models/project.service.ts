@@ -2,16 +2,16 @@ import {Injectable} from '@angular/core';
 import {Http, Response} from '@angular/http';
 import 'rxjs/add/operator/map';
 
-import { Task } from './task.model';
+import { Project } from './project.model';
 
 @Injectable()
-export class TaskService{
+export class ProjectService{
   
   constructor(private http:Http){}
   
-  getTasks(projectId: number){
+  getProjects(projectId: number){
     return this.http
-          .get('api/tasks.json')
+          .get('api/projects.json')
           .map((response: Response) => response.json().data);
     
   }

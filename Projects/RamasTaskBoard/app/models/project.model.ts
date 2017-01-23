@@ -1,4 +1,4 @@
-export class Task{
+export class Project{
   
   constructor(public id:number,
               public name:string,
@@ -9,7 +9,8 @@ export class Task{
   duration:number;*/
                 
 }
-/*[
+
+ /*[
       new Task(1,'Make a daily schedule',30),
       new Task(2,'Go for a run',60),
       new Task(3,'Code and tweet for #100daysofCode',10),
