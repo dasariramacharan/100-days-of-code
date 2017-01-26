@@ -1,35 +1,36 @@
 import { Component,Output,EventEmitter,Input,OnInit } from '@angular/core';
 
-import {Task} from '../models/task.model'
-import {TaskService } from '../models/task.service'
+import {Project} from '../models/project.model'
+import {ProjectService } from '../models/project.service'
+import {ProjectComponent} from './project.component'
 
 @Component({
   moduleId: module.id,
-  selector: 'my-task-list',
-  templateUrl: 'task-list.component.html',
-  styleUrls:[`./task-list.component.css`]
+  selector: 'my-project-list',
+  templateUrl: 'project-list.component.html',
+  styleUrls:[`./project-list.component.css`]
 })
-export class TaskListComponent implements OnInit {
+export class ProjectListComponent implements OnInit {
   
-  @Output() taskStarted = new EventEmitter<Task>();
+  @Output() projectStarted = new EventEmitter<Project>();
   @Input() projectId: number;
   
-   selectedTask :Task;
-   tasks : Task[] ;
+   selectedProject :Project;
+   projects : Project[] ;
     
-    constructor(private taskService:TaskService){} 
+    constructor(private projectService:ProjectService){} 
     
     ngOnInit(){
-      this.taskService.getTasks(this.projectId)
-           .subscribe(tasks => this.tasks = tasks);
-           console.log(this.tasks);
+      this.projectService.getProjects(this.projectId)
+           .subscribe(projects => this.projects = projects);
+           console.log(this.projects);
     }
       
-    select( task: Task) {
-      this.selectedTask = task;
+    select( project: Project) {
+      this.selectedProject = project;
     }
     
-    startTask() {
-      this.taskStarted.emit(this.selectedTask);
+    startProject() {
+      this.projectStarted.emit(this.selectedProject);
     };
 }

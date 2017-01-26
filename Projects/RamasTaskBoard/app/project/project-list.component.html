@@ -1,15 +1,15 @@
 <ul class="list">
-  <li *ngFor="let task of tasks" (click)="select(task)">
-     <div  [class.selected]="task === selectedTask">
-       {{task.id}}. {{task.name}}
+  <li *ngFor="let project of projects" (click)="select(project)">
+     <div  [class.selected]="project === selectedProject">
+       {{project.id}}. {{project.name}}
       </div>
   </li>
 </ul>
 
-<div class="form-control" *ngIf="selectedTask">
-  <h3>Selected Task : </h3>
-   <my-task [task]="selectedTask"></my-task>
-   <button (click)="startTask()">Start Task </button>
+<div class="form-control" *ngIf="selectedProject">
+  <h3>Selected Project : </h3>
+   <my-project [project]="selectedProject"></my-project>
+   <button (click)="startProject()">Start Project </button>
 </div>
  
  

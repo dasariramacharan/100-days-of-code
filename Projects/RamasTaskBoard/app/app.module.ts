@@ -1,20 +1,28 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule  } from '@angular/platform-browser';
+//import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import './rxjs-extensions';
 
+import { AppComponent } from './app.component'
 import { TaskBoardComponent } from './task/task-board.component';
 import { TaskComponent } from './task/task.component';
 import { TaskListComponent } from './task/task-list.component';
 import { TaskService } from './models/task.service';
+import { ProjectBoardComponent } from './project/project-board.component';
+import { ProjectComponent } from './project/project.component';
+import { ProjectListComponent } from './project/project-list.component';
+import { ProjectService } from './models/project.service';
 
 @NgModule({
   imports: [BrowserModule,HttpModule],
   declarations: [
+    AppComponent,
     TaskBoardComponent,
     TaskComponent,
     TaskListComponent,
       ],
-  bootstrap: [TaskBoardComponent],
+  bootstrap: [AppComponent],
   providers : [TaskService]
 })
 export class AppModule { }

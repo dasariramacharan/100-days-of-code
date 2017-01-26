@@ -15,4 +15,7 @@ _temp
 *.js
 *.map
 
+#remove auto generated Folders  
+node_modules
+packages
  
