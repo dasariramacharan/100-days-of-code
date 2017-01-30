@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { Task } from '../models/task.model' ;
+import { Project } from '../models/project.model';
 
 @Component({
   moduleId: module.id,
@@ -7,10 +8,17 @@ import { Task } from '../models/task.model' ;
   templateUrl: 'task-board.component.html',
   styleUrls: ['../../styles.css']
 })
-export class TaskBoardComponent {
-  userName = 'Rama';
+export class TaskBoardComponent implements OnChanges {
+  @Input() project : Project;
   currentTask :Task;
-  
+
+  ngOnChanges(changes: SimpleChanges) {
+    // changes.prop contains the old and the new value...
+    console.log("SimpleChanges in task board called with below changes");
+    console.log(changes);
+  }
+
+
   onTaskStarted(task:Task){
     this.currentTask = task;
   }
@@ -18,8 +26,4 @@ export class TaskBoardComponent {
 }
 
 
-/*
-Copyright 2016 JohnPapa.net, LLC. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at http://bit.ly/l1cense
-*/
+ 

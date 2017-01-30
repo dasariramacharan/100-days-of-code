@@ -14,6 +14,7 @@ export class ProjectBoardComponent {
   
   onProjectStarted(project:Project){
     this.currentProject = project;
+    console.log(`Current Project: ${project}`);
   }
   
 }

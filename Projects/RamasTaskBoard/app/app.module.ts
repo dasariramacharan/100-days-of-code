@@ -21,9 +21,11 @@ import { ProjectService } from './models/project.service';
     TaskBoardComponent,
     TaskComponent,
     TaskListComponent,
-      ],
+    ProjectBoardComponent,
+    ProjectComponent,
+    ProjectListComponent],
   bootstrap: [AppComponent],
-  providers : [TaskService]
+  providers: [TaskService, ProjectService]
 })
 export class AppModule { }
 
