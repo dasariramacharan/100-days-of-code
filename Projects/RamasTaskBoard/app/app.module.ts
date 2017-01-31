@@ -1,37 +1,17 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule  } from '@angular/platform-browser';
-//import { FormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms'; //This gives our application access to all of the template-driven forms features, including ngModel.
 import { HttpModule } from '@angular/http';
 import './rxjs-extensions';
 
 import { AppComponent } from './app.component'
-import { TaskBoardComponent } from './task/task-board.component';
-import { TaskComponent } from './task/task.component';
-import { TaskListComponent } from './task/task-list.component';
-import { TaskService } from './models/task.service';
-import { ProjectBoardComponent } from './project/project-board.component';
-import { ProjectComponent } from './project/project.component';
-import { ProjectListComponent } from './project/project-list.component';
-import { ProjectService } from './models/project.service';
+import { AppRoutingModule, routableComponents } from './app-routing.module';
+import { serviceComponents } from './app-services'
 
 @NgModule({
-  imports: [BrowserModule,HttpModule],
-  declarations: [
-    AppComponent,
-    TaskBoardComponent,
-    TaskComponent,
-    TaskListComponent,
-    ProjectBoardComponent,
-    ProjectComponent,
-    ProjectListComponent],
-  bootstrap: [AppComponent],
-  providers: [TaskService, ProjectService]
+  imports: [BrowserModule, FormsModule, HttpModule, AppRoutingModule],
+  declarations: [ AppComponent, routableComponents],
+  providers: [serviceComponents],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
-
-
-/*
-Copyright 2016 JohnPapa.net, LLC. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at http://bit.ly/l1cense
-*/
