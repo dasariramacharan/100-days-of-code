@@ -7,3 +7,7 @@
 
 Features to try
 1)cherry pick files to stage from vs2015 to git
+
+Defects to fix
+1)direct urls doesn't work
+2)

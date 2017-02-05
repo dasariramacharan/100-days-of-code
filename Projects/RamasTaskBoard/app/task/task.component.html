@@ -1,3 +1,18 @@
+<article>
+  <div *ngIf="task">
+    <h4>{{task.name}} Task</h4>
+
+    <div>
+      <label for="nameText">Name</label>
+      <input type="text" id="nameText" [(ngModel)]="task.name" />
+      
+      <label for="durationText">Duration</label>
+      <input type="text" id="durationText" [(ngModel)]="task.duration" />
+    </div>
+
+  </div>
+</article>
+
 <div class="row">
    {{task?.id}} -  {{task?.name}}  - {{task?.duration}} minutes
       <!--The Angular safe navigation operator (?.) is a more fluent and convenient way to 

@@ -7,7 +7,11 @@ import {TaskService } from '../models/task.service'
   moduleId: module.id,
   selector: 'my-task-list',
   templateUrl: 'task-list.component.html',
-  styleUrls:[`./task-list.component.css`]
+  styles: [`
+    .tasks {list-style-type: none;}
+    *.tasks li {padding: 4px;cursor: pointer;}
+  `]
+  //styleUrls:[`./task-list.component.css`]
 })
 export class TaskListComponent implements OnInit {
   
@@ -21,8 +25,9 @@ export class TaskListComponent implements OnInit {
     
     ngOnInit(){
       this.taskService.getTasks(this.projectId)
-           .subscribe(tasks => this.tasks = tasks);
-           console.log(this.tasks);
+        .subscribe(tasks => this.tasks = tasks);
+      console.log("tasks List:");
+      console.log(this.tasks);
     }
       
     select( task: Task) {
