@@ -8,6 +8,8 @@
         "**/.DS_Store": true,
          "**/**.js.map": true,
          "**/**.js": true
-    }
+    },
+
+    "typescript.tsdk": "../RamasTaskBoard/node_modules/typescript/lib"
 
 }

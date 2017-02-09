@@ -1,5 +1,7 @@
 <article>
-  <h4>My Tasks</h4>
+  <h4>My Tasks -1</h4>
+
+  <a href="" [routerLink]="['/tasks', undefined]">+ Add Item</a>
   <ul class="tasks">
     <li *ngFor="let task of tasks">
       <a href="" [routerLink]="['/tasks', task.id]">

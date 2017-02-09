@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <script>document.write('<base href="' + document.location + '" />');</script>
+  <script>document.write('<base href="/" />');</script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -15,7 +15,7 @@
   <script src="https://npmcdn.com/reflect-metadata@0.1.8"></script>
   <script src="https://npmcdn.com/systemjs@0.19.40/dist/system.src.js"></script>
 
-  <script>
+  <script> 
     System.import('systemjs.config.js')
       .then(function () { System.import('app/main') })
       .catch(console.error.bind(console));

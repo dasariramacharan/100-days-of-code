@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
-import { Task } from '../models/task.model';
+import { Task,ITask } from '../models/task.model';
 import { TaskService } from '../models/task.service';
 
 
@@ -11,7 +11,7 @@ import { TaskService } from '../models/task.service';
   templateUrl: 'task.component.html'
 })
 export class TaskComponent implements OnInit{
-  @Input() task: Task;
+  @Input() task: ITask = new Task();
 
   private id: any;
 
@@ -47,11 +47,22 @@ export class TaskComponent implements OnInit{
     if (task) {
       this.task = task;
     } else {
-      console.log('No edit task. Redirected to go tasks.');
-      this.gotoTasks();
+      //Add Mode
+      this.id = undefined;
+      //console.log('No edit task. Redirected to go tasks.');
+      //this.gotoTasks();
     }
   }
 
+  private onAddTask() {
+    console.log('todo call add Task..');
+    this.gotoTasks();
+  }
+
+  private onUpdateTask() {
+    console.log('todo call update Task..');
+    this.gotoTasks();
+  }
 }
 
  

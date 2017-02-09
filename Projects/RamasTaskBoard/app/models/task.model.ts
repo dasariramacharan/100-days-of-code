@@ -1,14 +1,16 @@
 export class Task{
   
-  constructor(public id:number,
-              public name:string,
-              public duration:number){}
+  id: number;
+  projectId: number;
+  name:string;
+  duration:number 
               
   /*id:number;
   name:string;
   duration:number;*/
                 
 }
+
 /*[
       new Task(1,'Make a daily schedule',30),
       new Task(2,'Go for a run',60),
