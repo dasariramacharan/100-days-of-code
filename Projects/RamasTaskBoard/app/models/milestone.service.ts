@@ -22,6 +22,6 @@ export class MilestoneService {
   private handleError(error: Response) {
     console.error(error);
     let msg = `Error status code ${error.status} at ${error.url}`;
-    return Observable.throw(msg);
+    return Promise.reject(msg);
   }
 }

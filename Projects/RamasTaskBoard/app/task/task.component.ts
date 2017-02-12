@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
-import { Task,ITask } from '../models/task.model';
+import { Task } from '../models/task.model';
 import { TaskService } from '../models/task.service';
 
 
@@ -11,7 +11,7 @@ import { TaskService } from '../models/task.service';
   templateUrl: 'task.component.html'
 })
 export class TaskComponent implements OnInit{
-  @Input() task: ITask = new Task();
+  @Input() task: Task = new Task();
 
   private id: any;
 

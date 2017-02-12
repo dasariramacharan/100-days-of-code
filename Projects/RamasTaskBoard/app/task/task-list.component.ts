@@ -46,7 +46,7 @@ export class TaskListComponent implements OnInit {
     }
 
     handleError(err: Response) {
-      this.errorMessage = "Error in getting vehicles";
+      this.errorMessage = "Error in getting tasks";
       return Observable.throw(err);
     }
 }
