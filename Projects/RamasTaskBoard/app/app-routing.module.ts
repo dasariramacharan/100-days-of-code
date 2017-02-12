@@ -8,6 +8,8 @@ import { TaskListComponent } from './task/task-list.component';
 //import { ProjectBoardComponent } from './project/project-board.component';
 import { ProjectComponent } from './project/project.component';
 import { ProjectListComponent } from './project/project-list.component';
+import { MilestoneListComponent } from './milestone/milestone-list.component';
+
 import { PageNotFoundComponent } from './page-not-found.component';
 
 const routes: Routes = [
@@ -16,6 +18,7 @@ const routes: Routes = [
   { path: 'projects/:id', component: ProjectComponent },
   { path: 'tasks', component: TaskListComponent },
   { path: 'tasks/:id', component: TaskComponent },
+  { path: 'milestones', component: MilestoneListComponent },
   { path: '**', pathMatch: 'full', component: PageNotFoundComponent },
 ];
 
@@ -30,6 +33,7 @@ export const routableComponents = [
   ProjectComponent,
   TaskListComponent,
   TaskComponent,
+  MilestoneListComponent,
   PageNotFoundComponent
 ];
 

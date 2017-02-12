@@ -1,0 +1,7 @@
+﻿<div class="error" *ngIf="errorMessage">{{errorMessage}}</div>
+
+<ul>
+  <li *ngFor="let milestone of milestones | async">
+    {{milestone.name}}
+  </li>
+</ul>
