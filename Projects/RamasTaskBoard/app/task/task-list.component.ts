@@ -1,4 +1,6 @@
 import { Component,Output,EventEmitter,Input,OnInit } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+import { Response } from '@angular/http';
 
 import {Task} from '../models/task.model'
 import {TaskService } from '../models/task.service'
@@ -10,6 +12,7 @@ import {TaskService } from '../models/task.service'
   styles: [`
     .tasks {list-style-type: none;}
     *.tasks li {padding: 4px;cursor: pointer;}
+    li {cursor: pointer;} .error {color:red;}
   `]
   //styleUrls:[`./task-list.component.css`]
 })
@@ -17,17 +20,14 @@ export class TaskListComponent implements OnInit {
   
   @Output() taskStarted = new EventEmitter<Task>();
   @Input() projectId: number;
-  
-   selectedTask :Task;
-   tasks : Task[] ;
-    
-    constructor(private taskService:TaskService){} 
+
+  errorMessage: string;
+  selectedTask :Task;
+  tasks: Observable<Task[]>;
+      constructor(private taskService:TaskService){} 
     
     ngOnInit(){
-      this.taskService.getTasks(this.projectId)
-        .subscribe(tasks => this.tasks = tasks);
-      console.log("tasks List:");
-      console.log(this.tasks);
+      this.searchTasks('');
     }
       
     select( task: Task) {
@@ -36,5 +36,17 @@ export class TaskListComponent implements OnInit {
     
     startTask() {
       this.taskStarted.emit(this.selectedTask);
-    };
+
+    }
+
+    searchTasks(searchText: string) {
+      this.tasks = this.taskService.getTasks(this.projectId, searchText)
+        .catch(err => this.handleError(err));
+
+    }
+
+    handleError(err: Response) {
+      this.errorMessage = "Error in getting vehicles";
+      return Observable.throw(err);
+    }
 }

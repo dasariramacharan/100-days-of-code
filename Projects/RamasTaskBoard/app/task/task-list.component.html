@@ -1,9 +1,13 @@
 <article>
   <h4>My Tasks -1</h4>
+  
+  <div class="error" *ngIf="errorMessage">{{errorMessage}}</div>
 
-  <a href="" [routerLink]="['/tasks', undefined]">+ Add Item</a>
+
+  <input #searchText (keyup)="searchTasks(searchText.value)" />
+  <a href="" [routerLink]="['/tasks', undefined]" *ngIf="!tasks">+ Add Item</a>
   <ul class="tasks">
-    <li *ngFor="let task of tasks">
+    <li *ngFor="let task of tasks | async">
       <a href="" [routerLink]="['/tasks', task.id]">
         {{task.id}}. {{task.name}} {{task.duration}}
       </a>
