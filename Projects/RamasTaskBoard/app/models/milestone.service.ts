@@ -19,6 +19,13 @@ export class MilestoneService {
       catch(this.handleError);
   }
 
+
+  getMilestone(id:number): Promise<Milestone> {//: Milestone  - TODO: identify how to specify non promise return type and result directly instead of promise 
+   return this.getMilestones()
+    .then((milestones:Milestone[]) =>{
+          return milestones.find(m=>m.id === id);
+    });  
+  }
   private handleError(error: Response) {
     console.error(error);
     let msg = `Error status code ${error.status} at ${error.url}`;

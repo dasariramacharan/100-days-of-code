@@ -25,9 +25,9 @@ export class TaskComponent implements OnInit{
     if (!this.task) {
       // Could use a snapshot here, as long as the parameters do not change.
       // This may happen when a component is re-used.
-      // this.id = +this.route.snapshot.params['id'];
+      // this.id = +this.route.snapshot.params['id']; // snapshot method of reading route params
       this.route.params
-        .map(params => params["id"])
+        .map(params => params["id"])  //observable method reading route params
         .do(id => this.id = +id)
         .subscribe(id => this.getTask());
     }

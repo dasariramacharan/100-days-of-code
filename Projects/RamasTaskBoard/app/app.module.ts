@@ -7,11 +7,15 @@ import './rxjs-extensions';
 import { AppComponent } from './app.component'
 import { AppRoutingModule, routableComponents } from './app-routing.module';
 import { serviceComponents } from './app-services'
+import { MilestoneResolver } from './milestone/shared/milestone-resolver.service';//TODO:move it milestone feature when implemented
+
+
 
 @NgModule({
   imports: [BrowserModule, FormsModule, HttpModule, AppRoutingModule],
   declarations: [ AppComponent, routableComponents],
-  providers: [serviceComponents],
+  providers: [
+    serviceComponents,MilestoneResolver],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
