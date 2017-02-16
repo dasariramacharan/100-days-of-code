@@ -5,17 +5,22 @@ import { HttpModule } from '@angular/http';
 import './rxjs-extensions';
 
 import { AppComponent } from './app.component'
+import { ProjectsModule} from './project/projects.module';
 import { AppRoutingModule, routableComponents } from './app-routing.module';
 import { serviceComponents } from './app-services'
-import { MilestoneResolver } from './milestone/shared/milestone-resolver.service';//TODO:move it milestone feature when implemented
-
-
+//import { MilestoneResolver } from './milestone/shared/milestone-resolver.service';//TODO:move it milestone feature when implemented
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, HttpModule, AppRoutingModule],
+  imports: [BrowserModule, FormsModule, HttpModule, 
+  ProjectsModule, //Note: Eager loading Module here
+                  // Order of loading important. 
+                  //should come before AppRoutingModule(default route). 
+  AppRoutingModule],
   declarations: [ AppComponent, routableComponents],
   providers: [
-    serviceComponents,MilestoneResolver],
+    serviceComponents
+    //MilestoneResolver
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
