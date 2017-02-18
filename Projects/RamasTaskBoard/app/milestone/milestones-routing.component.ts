@@ -13,7 +13,7 @@ const routes: Routes = [
     children : [
         {path : '', component: MilestoneListComponent},
         {path : ':id', component: MilestoneComponent,
-           resolve :{ milestone: MilestoneResolver}        
+         resolve :{ milestone: MilestoneResolver}},        
      ]
   }
 ];

@@ -3,6 +3,10 @@
 
 <head>
   <script>document.write('<base href="/" />');</script>
+    
+   
+    <!--<link rel="stylesheet" href="styles.css">-->
+
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -14,14 +18,23 @@
   <script src="https://npmcdn.com/zone.js@0.6.26?main=browser"></script>
   <script src="https://npmcdn.com/reflect-metadata@0.1.8"></script>
   <script src="https://npmcdn.com/systemjs@0.19.40/dist/system.src.js"></script>
-
+  
   <script> 
     System.import('systemjs.config.js')
       .then(function () { System.import('app/main') })
       .catch(console.error.bind(console));
   </script>
-</body>
 
+  <!--toastr files ( has dependency on jquery)-->
+   <script src="node_modules/jquery/dist/jquery.min.js"></script>
+   <script src="node_modules/toastr/build/toastr.min.js"></script>  
+   <link rel="stylesheet" href="node_modules/toastr/build/toastr.min.css">   
+ 
+ 
+   <link rel="stylesheet" type="text/css" href="styles.css" media="screen" />
+
+
+</body>
 </html>
 
 

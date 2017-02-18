@@ -3,7 +3,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { LoginService } from './login.service';
 import { OnDestroy, Component} from '@angular/core';
 import { Subscription } from 'rxjs/Subscription';
-
+import { ToastrService } from '../core/toastr.service';
 
 @Component({
     moduleId: module.id,
@@ -18,7 +18,8 @@ export class LoginComponent implements OnDestroy {
        private loginService : LoginService,
        private route : ActivatedRoute,
        private router : Router,
-       private  userProfileService: UserProfileService
+       private  userProfileService: UserProfileService,
+       private toastrService : ToastrService
    ) { }
    
    private get isLoggedIn() : boolean{
@@ -30,7 +31,7 @@ export class LoginComponent implements OnDestroy {
 
    logout(){
        this.loginService.logOut();
-       console.log("Sucessfully logged out");
+       this.toastrService.info("Sucessfully logged out");
    }
 
    login(){

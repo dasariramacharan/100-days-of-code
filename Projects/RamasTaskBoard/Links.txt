@@ -1,0 +1,26 @@
+1) NVM for windows - manage multiple versions of node
+https://github.com/coreybutler/nvm-windows/releases/tag/1.1.1
+
+2)toastr at https://github.com/CodeSeven/toastr
+
+3)
+
+
+
+
+
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
